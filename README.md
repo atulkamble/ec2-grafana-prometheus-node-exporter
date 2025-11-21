@@ -3,7 +3,7 @@ Grafana Server
 ```
 // installation of grafana server 
 
-t3.medium | SG-Inbound-3000 | 9090
+t3.medium | SG-Inbound-3000 | 9090 | 9100
 
 sudo yum update -y
 sudo yum install wget tar -y
