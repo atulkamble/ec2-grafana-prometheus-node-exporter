@@ -16,7 +16,7 @@ http://18.232.59.17:3000/
 
 >> Admin@123
 
-# install prometheus 
+# Prometheus 
 ```
 wget https://prometheus.io/download/3.7.3/2025-10-29/prometheus-3.7.3.linux-amd64.tar.gz
 
