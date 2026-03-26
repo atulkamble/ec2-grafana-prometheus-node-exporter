@@ -80,6 +80,14 @@ http://<EC2-PUBLIC-IP>:3000
 
 ---
 
+# WinSCP  >> Install 
+https://winscp.net/eng/download.php
+
+# Download Prometheus Setup | LTS/Linux
+https://prometheus.io/download/
+
+
+
 ## 🔹 Step 4: Copy Prometheus Binary to EC2
 
 ### SCP from Local Machine (macOS/Linux)
