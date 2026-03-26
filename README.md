@@ -45,7 +45,10 @@ sudo yum update -y
 ### Install Grafana RPM
 
 ```bash
-sudo yum install -y https://dl.grafana.com/grafana-enterprise/release/12.3.1/grafana-enterprise_12.3.1_20271043721_linux_amd64.rpm
+sudo yum update -y
+sudo yum install wget tar -y
+sudo yum install make -y
+sudo yum install -y https://dl.grafana.com/grafana-enterprise/release/12.2.1/grafana-enterprise_12.2.1_18655849634_linux_amd64.rpm
 ```
 
 ### Verify Grafana Version
@@ -59,8 +62,8 @@ grafana-server --version
 ## 🔹 Step 3: Start & Enable Grafana Service
 
 ```bash
-sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
+sudo systemctl enable  grafana-server
 sudo systemctl status grafana-server
 ```
 
@@ -82,9 +85,9 @@ http://<EC2-PUBLIC-IP>:3000
 ### SCP from Local Machine (macOS/Linux)
 
 ```bash
-scp -i /Users/atul/Downloads/grafana.pem \
-/Users/atul/Downloads/prometheus-3.9.0-rc.0.linux-amd64.tar.gz \
-ec2-user@ec2-98-89-6-93.compute-1.amazonaws.com:/home/ec2-user/
+scp -i /Users/atul/Downloads/monitor.pem \
+/Users/atul/Downloads/prometheus-3.5.1.linux-amd64.tar.gz \
+ec2-user@ec2-174-129-108-160.compute-1.amazonaws.com:/home/ec2-user/
 ```
 
 ---
@@ -92,11 +95,11 @@ ec2-user@ec2-98-89-6-93.compute-1.amazonaws.com:/home/ec2-user/
 ## 🔹 Step 5: Move & Extract Prometheus
 
 ```bash
-sudo mv prometheus-3.9.0-rc.0.linux-amd64.tar.gz /opt
+sudo mv prometheus-3.5.1.linux-amd64.tar.gz /opt
 cd /opt
-sudo tar -xvf prometheus-3.9.0-rc.0.linux-amd64.tar.gz
-sudo mv prometheus-3.9.0-rc.0.linux-amd64 prometheus
-sudo rm prometheus-3.9.0-rc.0.linux-amd64.tar.gz
+sudo tar -xvf prometheus-3.5.1.linux-amd64.tar.gz
+sudo mv prometheus-3.5.1.linux-amd64 prometheus
+sudo rm prometheus-3.5.1.linux-amd64.tar.gz
 ```
 
 ---
