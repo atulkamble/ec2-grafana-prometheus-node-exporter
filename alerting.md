@@ -51,7 +51,7 @@ groups:
 
 ---
 
-## 📌 Step 2: Update Prometheus Config
+## 📌 Step 2: Update Prometheus Config as below
 
 ```bash
 sudo nano /etc/prometheus/prometheus.yml
