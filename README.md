@@ -13,6 +13,17 @@
 
 ---
 
+## 🔹 AWS Security Group Configuration
+
+| Service    | Port   | Protocol |
+| ---------- | ------ | -------- |
+| Grafana    | `3000` | TCP      |
+| Prometheus | `9090` | TCP      |
+| Node Exporter | `9100` | TCP      |
+| SSH        | `22`   | TCP      |
+
+---
+
 ## 🧩 Architecture Overview
 
 * **Grafana** → Visualization layer (Port `3000`)
@@ -210,7 +221,7 @@ http://<EC2-PUBLIC-IP>:9090
 
 ---
 
-## 🔹 Step 1: Download & Extract
+## 🔹 Step 10: Download & Extract
 
 ```bash
 wget https://github.com/prometheus/node_exporter/releases/download/v1.10.2/node_exporter-1.10.2.linux-amd64.tar.gz
@@ -220,7 +231,7 @@ cd node_exporter-1.10.2.linux-amd64
 
 ---
 
-## 🔹 Step 2: Run Manually (Test)
+## 🔹 Step 11: Run Manually (Test)
 
 ```bash
 ./node_exporter
@@ -234,7 +245,7 @@ http://<SERVER-IP>:9100/metrics
 
 ---
 
-## 🔹 Step 3: Install Binary & Create User
+## 🔹 Step 12: Install Binary & Create User
 
 ```bash
 sudo cp node_exporter /usr/local/bin
@@ -244,7 +255,7 @@ sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
 ---
 
-## 🔹 Step 4: Create Systemd Service
+## 🔹 Step 13: Create Systemd Service
 
 ```bash
 sudo vi /etc/systemd/system/node_exporter.service
@@ -269,7 +280,7 @@ WantedBy=multi-user.target
 
 ---
 
-## 🔹 Step 5: Start & Enable Service
+## 🔹 Step 14: Start & Enable Service
 
 ```bash
 sudo systemctl daemon-reload
@@ -280,7 +291,7 @@ sudo systemctl status node_exporter
 
 ---
 
-## 🔹 Step 6: Verify
+## 🔹 Step 15: Verify
 
 Open browser:
 
@@ -332,17 +343,6 @@ scrape_configs:
 
 ---
 
-## 🔹 Step 10: AWS Security Group Configuration
-
-| Service    | Port   | Protocol |
-| ---------- | ------ | -------- |
-| Grafana    | `3000` | TCP      |
-| Prometheus | `9090` | TCP      |
-| Node Exporter | `9100` | TCP      |
-| SSH        | `22`   | TCP      |
-
----
-
 ## 🎯 Final Validation Checklist
 
 ✔ Grafana running
@@ -353,7 +353,7 @@ scrape_configs:
 
 ---
 
-## 🚀 Next Steps (Recommended)
+## 🚀 Recommended flow
 
 * Add **Prometheus as Grafana Data Source**
 * Install **Node Exporter**
