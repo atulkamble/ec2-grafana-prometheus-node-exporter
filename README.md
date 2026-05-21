@@ -10,6 +10,7 @@
 | OS            | Amazon Linux 2 |
 | Key Pair      | `grafana.pem`  |
 | User          | `ec2-user`     |
+| SSD           | `60GB`     |
 
 ---
 
