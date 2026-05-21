@@ -199,7 +199,7 @@ sudo mv prometheus-3.11.3.linux-amd64.tar.gz /opt
 cd /opt
 sudo tar -xvf prometheus-3.11.3.linux-amd64.tar.gz
 sudo mv prometheus-3.11.3.linux-amd64 prometheus
-sudo rm pprometheus-3.11.3.linux-amd64.tar.gz
+sudo rm prometheus-3.11.3.linux-amd64.tar.gz
 ```
 
 ---
