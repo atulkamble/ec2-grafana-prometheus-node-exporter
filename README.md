@@ -185,9 +185,9 @@ https://prometheus.io/download/
 ### SCP from Local Machine (macOS/Linux)
 
 ```bash
-scp -i /Users/atul/Downloads/monitor.pem \
+scp -i /Users/atul/Downloads/grafana.pem \
 /Users/atul/Downloads/prometheus-3.11.3.linux-amd64.tar.gz \
-ec2-user@ec2-174-129-108-160.compute-1.amazonaws.com:/home/ec2-user/
+ec2-user@ec2-98-82-185-137.compute-1.amazonaws.com:/home/ec2-user/
 ```
 
 ---
