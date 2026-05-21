@@ -268,19 +268,40 @@ WantedBy=multi-user.target
 
 ## 🔹 Step 15: Update Prometheus Config
 
+remove config file 
+```
+sudo rm /etc/prometheus/prometheus.yml
+```
 edit config file 
 ```
 sudo nano /etc/prometheus/prometheus.yml
 ```
 ```
+# my global config
 global:
   scrape_interval: 15s
   evaluation_interval: 15s
 
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# Scrape configurations
 scrape_configs:
+
   - job_name: "prometheus"
     static_configs:
       - targets: ["localhost:9090"]
+        labels:
+          app: "prometheus"
 
   - job_name: "node_exporter"
     static_configs:
