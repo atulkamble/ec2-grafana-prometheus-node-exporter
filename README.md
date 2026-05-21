@@ -50,7 +50,7 @@ sudo yum update -y
 
 ---
 
-## 🔹 Step 10: Download & Extract
+## 🔹 Step 2: Download & Extract
 
 ```bash
 wget https://github.com/prometheus/node_exporter/releases/download/v1.10.2/node_exporter-1.10.2.linux-amd64.tar.gz
@@ -60,7 +60,7 @@ cd node_exporter-1.10.2.linux-amd64
 
 ---
 
-## 🔹 Step 11: Run Manually (Test)
+## 🔹 Step 3: Run Manually (Test)
 
 ```bash
 ./node_exporter
@@ -74,7 +74,7 @@ http://<SERVER-IP>:9100/metrics
 
 ---
 
-## 🔹 Step 12: Install Binary & Create User
+## 🔹 Step 4: Install Binary & Create User
 
 ```bash
 sudo cp node_exporter /usr/local/bin
@@ -84,7 +84,7 @@ sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
 ---
 
-## 🔹 Step 13: Create Systemd Service
+## 🔹 Step 5: Create Systemd Service
 
 ```bash
 sudo nano /etc/systemd/system/node_exporter.service
@@ -109,7 +109,7 @@ WantedBy=multi-user.target
 
 ---
 
-## 🔹 Step 14: Start & Enable Service
+## 🔹 Step 6: Start & Enable Service
 
 ```bash
 sudo systemctl daemon-reload
@@ -120,7 +120,7 @@ sudo systemctl status node_exporter
 
 ---
 
-## 🔹 Step 15: Verify
+## 🔹 Step 7: Verify
 
 Open browser:
 
@@ -132,7 +132,7 @@ http://<SERVER-IP>:9100/metrics
 
 ---
 
-## 🔹 Step 2: Install Grafana (Enterprise Edition)
+## 🔹 Step 8: Install Grafana (Enterprise Edition)
 
 ### Install Grafana RPM
 
@@ -151,7 +151,7 @@ grafana-server --version
 
 ---
 
-## 🔹 Step 3: Start & Enable Grafana Service
+## 🔹 Step 9: Start & Enable Grafana Service
 
 ```bash
 sudo systemctl start grafana-server
@@ -180,7 +180,7 @@ https://prometheus.io/download/
 
 
 
-## 🔹 Step 4: Copy Prometheus Binary to EC2
+## 🔹 Step 10: Copy Prometheus Binary to EC2
 
 ### SCP from Local Machine (macOS/Linux)
 
@@ -192,7 +192,7 @@ ec2-user@ec2-174-129-108-160.compute-1.amazonaws.com:/home/ec2-user/
 
 ---
 
-## 🔹 Step 5: Move & Extract Prometheus
+## 🔹 Step 11: Move & Extract Prometheus
 
 ```bash
 sudo mv prometheus-3.5.1.linux-amd64.tar.gz /opt
@@ -204,7 +204,7 @@ sudo rm prometheus-3.5.1.linux-amd64.tar.gz
 
 ---
 
-## 🔹 Step 6: Create Prometheus System User
+## 🔹 Step 12: Create Prometheus System User
 
 ```bash
 sudo useradd --no-create-home --shell /bin/false prometheus
@@ -212,7 +212,7 @@ sudo useradd --no-create-home --shell /bin/false prometheus
 
 ---
 
-## 🔹 Step 7: Configure Prometheus Directories
+## 🔹 Step 13: Configure Prometheus Directories
 
 ```bash
 cd /opt/prometheus
@@ -236,7 +236,7 @@ sudo chown prometheus:prometheus /usr/local/bin/promtool
 
 ---
 
-## 🔹 Step 8: Create Prometheus systemd Service
+## 🔹 Step 14: Create Prometheus systemd Service
 
 ```bash
 sudo nano /etc/systemd/system/prometheus.service
@@ -266,7 +266,7 @@ WantedBy=multi-user.target
 
 ---
 
-## 🔹 Step 9: Update Prometheus Config
+## 🔹 Step 15: Update Prometheus Config
 
 edit config file 
 ```
