@@ -28,7 +28,7 @@
 ## 🧩 Architecture Overview
 
 * **EC2** → Hosts both services
-* * **Grafana** → Visualization layer (Port `3000`)
+* **Grafana** → Visualization layer (Port `3000`)
 * **Prometheus** → Metrics collection & storage (Port `9090`)
 * **Systemd** → Manages Prometheus & Grafana as services
 
