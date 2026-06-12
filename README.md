@@ -195,7 +195,7 @@ ec2-user@ec2-98-82-185-137.compute-1.amazonaws.com:/home/ec2-user/
 ## 🔹 Step 11: Move & Extract Prometheus
 
 ```bash
-sudo mv prometheus-3.11.3.linux-amd64.tar.gz /opt
+sudo mv prometheus-3.5.3.linux-amd64.tar.gz /opt
 cd /opt
 sudo tar -xvf prometheus-3.5.3.linux-amd64.tar.gz
 sudo mv prometheus-3.5.3.linux-amd64 prometheus
