@@ -229,6 +229,10 @@ sudo cp prometheus.yml /etc/prometheus/
 ### Set Permissions
 
 ```bash
+sudo chown -R prometheus:prometheus /var/lib/prometheus
+sudo chown -R prometheus:prometheus /etc/prometheus
+sudo chmod -R 755 /var/lib/prometheus
+sudo chmod -R 755 /etc/prometheus
 sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
