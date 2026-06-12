@@ -186,7 +186,7 @@ https://prometheus.io/download/
 
 ```bash
 scp -i /Users/atul/Downloads/grafana.pem \
-/Users/atul/Downloads/prometheus-3.11.3.linux-amd64.tar.gz \
+/Users/atul/Downloads/prometheus-3.5.3.linux-amd64.tar.gz \
 ec2-user@ec2-98-82-185-137.compute-1.amazonaws.com:/home/ec2-user/
 ```
 
@@ -197,9 +197,9 @@ ec2-user@ec2-98-82-185-137.compute-1.amazonaws.com:/home/ec2-user/
 ```bash
 sudo mv prometheus-3.11.3.linux-amd64.tar.gz /opt
 cd /opt
-sudo tar -xvf prometheus-3.11.3.linux-amd64.tar.gz
-sudo mv prometheus-3.11.3.linux-amd64 prometheus
-sudo rm prometheus-3.11.3.linux-amd64.tar.gz
+sudo tar -xvf prometheus-3.5.3.linux-amd64.tar.gz
+sudo mv prometheus-3.5.3.linux-amd64 prometheus
+sudo rm prometheus-3.5.3.linux-amd64.tar.gz
 ```
 
 ---
