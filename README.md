@@ -7,7 +7,7 @@
 | Cloud         | AWS            |
 | Service       | EC2            |
 | Instance Type | `t3.medium`    |
-| OS            | Amazon Linux 2 |
+| OS            | Amazon Linux 2023 (kernel-6.1) |
 | Key Pair      | `grafana.pem`  |
 | User          | `ec2-user`     |
 | SSD           | `60GB`     |
