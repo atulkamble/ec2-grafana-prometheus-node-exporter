@@ -69,7 +69,7 @@ cd node_exporter-1.10.2.linux-amd64
 👉 Access in browser:
 
 ```
-http://<SERVER-IP>:9100/metrics
+http://EC2-PUBLIC-IP:9100/metrics
 ```
 
 ---
@@ -125,7 +125,7 @@ sudo systemctl status node_exporter
 Open browser:
 
 ```
-http://<SERVER-IP>:9100/metrics
+http://EC2-PUBLIC-IP:9100/metrics
 ```
 
 ✔ You should see system metrics output
@@ -162,7 +162,7 @@ sudo systemctl status grafana-server
 ✅ **Grafana Web UI**
 
 ```
-http://<EC2-PUBLIC-IP>:3000
+http://EC2-PUBLIC-IP:3000
 ```
 
 **Default Credentials**
